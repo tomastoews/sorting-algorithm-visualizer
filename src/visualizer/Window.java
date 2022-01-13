@@ -9,7 +9,6 @@ import javax.swing.JFrame;
 
 public class Window extends JFrame {
     private int[] list;
-    private ArrayList<NumberBox> boxes;
     private int[] selectedIndexes;
     private int windowWidth;
     private int windowHeight;
@@ -17,16 +16,12 @@ public class Window extends JFrame {
     private int padding;
     private String fontName;
     private int fontSize;
-    public boolean areBoxesVisible;
     private boolean selectAllItems = false;
 
     public Window(int[] list) {
         super();
 
         this.list = list;
-        boxes = new ArrayList<NumberBox>();
-        areBoxesVisible = false;
-
         windowWidth = Config.windowWidth;
         windowHeight = Config.windowHeight;
         boxSize = Config.boxSize;
@@ -77,9 +72,6 @@ public class Window extends JFrame {
                 x+(boxSize/2)-(fontSize/2),
                 y+(boxSize/2)+(fontSize/2)
             );
-        }
-        if (boxes.size() > 0) {
-            areBoxesVisible = true;
         }
     }
 
