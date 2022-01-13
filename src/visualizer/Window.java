@@ -18,7 +18,7 @@ public class Window extends JFrame {
     private String fontName;
     private int fontSize;
     public boolean areBoxesVisible;
-	private boolean selectAllItems = false;
+    private boolean selectAllItems = false;
 
     public Window(int[] list) {
         super();
@@ -51,14 +51,14 @@ public class Window extends JFrame {
         g.clearRect(0, 0, windowWidth, windowHeight);
         g.setFont(new Font(fontName, Font.PLAIN, 20));
 
-		for (int i = 0; i <= list.length-1; i++) {
+        for (int i = 0; i <= list.length-1; i++) {
             int number = list[i];
 
-			Color boxColor = (
-				i == selectedIndexes[0] || 
-				i == selectedIndexes[1] ||
-				selectAllItems
-			) ? Color.CYAN : Color.MAGENTA;
+            Color boxColor = (
+                i == selectedIndexes[0] || 
+                i == selectedIndexes[1] ||
+                selectAllItems
+            ) ? Color.CYAN : Color.MAGENTA;
 
             // Calculate individual position for each box (together they have to be centered)
             int occuppiedWidth = Utils.calculateTotalBoxesWidth(count);
@@ -68,7 +68,7 @@ public class Window extends JFrame {
             x = x + (boxSize + padding) * i;
             int y = (windowHeight / 2) - (boxSize / 4);
             
-			g.setColor(boxColor);
+            g.setColor(boxColor);
             g.drawRect(x, y, boxSize, boxSize);
 
             g.setColor(Color.WHITE);
@@ -87,10 +87,10 @@ public class Window extends JFrame {
         selectedIndexes = indexes;
     }
    
-	public void selectAllItems() {
-		selectAllItems = true;
-		repaint();
-	}
+    public void selectAllItems() {
+        selectAllItems = true;
+        repaint();
+    }
 
     public void updateList(int[] list) {
         this.list = list;

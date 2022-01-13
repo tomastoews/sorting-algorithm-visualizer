@@ -19,15 +19,15 @@ public class BubbleSortAlgorithm extends Algorithm {
             selectedIndexes = new int[]{index, index+1};		
         }
         if (index == list.length-2 && !swaps) done = true;
-      	if (!done) {
-	   		if (index == list.length-2) {
-            	index = 0;
-            	cycles++;
-            	swaps = false;
-        	} else {
-            	index++;
-        	}
-		}
+        if (!done) {
+            if (index == list.length-2) {
+                index = 0;
+                cycles++;
+                swaps = false;
+            } else {
+                index++;
+            }
+        }
     }
 
 }
