@@ -1,4 +1,4 @@
-# sorting-algorithm-visualizer
+# Sorting Algorithm Visualizer
 A graphical java program for visualizing sorting algorithms
 
 ![Screenshot 1](https://raw.githubusercontent.com/tomastoews/sorting-algorithm-visualizer/main/screenshots/screenshot-1.png?raw=true)
